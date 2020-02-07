@@ -3,8 +3,7 @@ import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/fo
 
 @Component({
   selector: 'app-demo-form-with-validations-shorthand',
-  templateUrl: './demo-form-with-validations-shorthand.component.html',
-  styleUrls: ['./demo-form-with-validations-shorthand.component.css']
+  templateUrl: './demo-form-with-validations-shorthand.component.html'
 })
 export class DemoFormWithValidationsShorthandComponent implements OnInit {
 
