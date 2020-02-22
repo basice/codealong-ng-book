@@ -1,18 +1,33 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
+import { SimpleHttpComponent } from './simple-http/simple-http.component';
+import { YouTubeSearchComponent } from './you-tube-search/you-tube-search.component';
+import { youTubeSearchInjectables } from './you-tube-search/you-tube-search.injectables';
+import { SearchBoxComponent } from './you-tube-search/search-box.component';
+import { SearchResultComponent } from './you-tube-search/search-result.component';
+import { MoreHttpRequestsComponent } from './more-http-requests/more-http-requests.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SimpleHttpComponent,
+    YouTubeSearchComponent,
+    SearchBoxComponent,
+    SearchResultComponent,
+    MoreHttpRequestsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    youTubeSearchInjectables
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
